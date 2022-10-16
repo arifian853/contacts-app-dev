@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'); 
+
+:root {
+    --base-dark : #222831;
+    --base-light : #EEEEEE;
+    --dark-blue : #082032;
+    --blue : #0a1a25;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight : 800;
+    letter-spacing: 1.1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--base-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.contact-app {
+    background-color: var(--dark-blue);
+    color: var(--base-light);
+    width: 40em;
+    margin: 10vh auto;
+    padding: 1em;
+    text-align : center;
+    border-radius: 1em;
+    border : 1px solid var(--base-light);
 }
 
-.App-link {
-  color: #61dafb;
+.contact-item {
+    background-color: var(--blue);
+    border: 1px solid var(--base-light);
+    border-radius : 1em;
+    padding : 0.4em 0.4em 0.4em 0.9em;
+    display : flex;
+    flex-direction : row;
+    width : 90%;
+    margin : 2vh auto;
+    align-items : center;
+    gap : 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-item-body {
+    text-align : left;
+}
+
+.contact-item-body h3 {
+    font-size : 18px;
+} 
+
+.contact-item-body p {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.contact-profile img{
+    width: 65px;
+    height : 65px;
+    border-radius : 50%;
 }
