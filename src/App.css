@@ -7,6 +7,30 @@
     --blue : #0a1a25;
 }
 
+/*SCROLLBAR*/
+
+/* Width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Background */
+::-webkit-scrollbar-track {
+    background: var(--dark-blue);
+}
+
+/*The Scrollbar itself*/
+::-webkit-scrollbar-thumb {
+    background: var(--base-light);
+    border-radius: 5px;
+    margin-right: 1em;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background : gray;
+}
+
+
 * {
     font-family: 'Quicksand', sans-serif;
     font-weight : 800;
@@ -22,10 +46,22 @@ html, body {
     background-color: var(--base-dark);
 }
 
+.contact-app-wrapper {
+    display : flex;
+    flex-direction : row;
+    justify-content: center;
+}
+
+.contact-item-wrapper {
+    overflow : auto;
+    height : 25em;
+}
+
 .contact-app {
     background-color: var(--dark-blue);
     color: var(--base-light);
-    width: 40em;
+    width: 30em;
+    height : 33em;
     margin: 10vh auto;
     padding: 1em;
     text-align : center;
@@ -48,19 +84,64 @@ html, body {
 
 .contact-item-body {
     text-align : left;
+    width : 70%;
 }
 
 .contact-item-body h3 {
-    font-size : 18px;
+    font-size : 15px;
 } 
 
 .contact-item-body p {
     font-weight: 300;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .contact-profile img{
-    width: 65px;
-    height : 65px;
+    width: 45px;
+    height : 45px;
     border-radius : 50%;
+}
+
+.contact-item-delete {
+    width: 45px;
+    height : 45px;
+    border-radius : 50%;
+    background-color: var(--base-light);
+    border : 1px solid var(--base-dark);
+    float : right;
+}
+
+.contact-item-delete:hover {
+    background-color: var(--base-dark);
+    border : 1px solid var(--base-light);
+    color : var(--base-light);
+    transition : 0.4s;
+    transform : rotate(360deg);
+    cursor : pointer;
+}
+
+.contact-input input {
+    background-color: var(--base-light);
+    padding: 10px;
+    border-radius: 1em;
+    border : 1px solid var(--dark-blue);
+    width : 90%;
+    margin : 1vh auto;
+}
+
+.contact-input button {
+    background-color: var(--dark-blue);
+    padding: 10px;
+    border-radius: 1em;
+    border : 1px solid var(--base-light);
+    width : 40%;
+    margin : 1vh auto;
+    color: var(--base-light);
+}
+
+.contact-input button:hover {
+    background-color: var(--base-light);
+    transition: 0.4s;
+    cursor: pointer;
+    color : var(--blue);
 }
