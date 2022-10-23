@@ -145,3 +145,37 @@ html, body {
     cursor: pointer;
     color : var(--blue);
 }
+
+@media screen and (max-width: 768px) {
+    body, html {
+        background-repeat: no-repeat;
+        scroll-behavior: smooth;
+        scroll-snap-type: none;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+    .contact-app-wrapper {
+        display : flex;
+        flex-direction : column;
+        justify-content: center;
+    }
+
+    .contact-app {
+        background-color: var(--dark-blue);
+        color: var(--base-light);
+        width: 19em;
+        height : 33em;
+        margin: 10vh auto;
+        padding: 1em;
+        text-align : center;
+        border-radius: 1em;
+        border : 1px solid var(--base-light);
+    }
+
+    .contact-item-body {
+        text-align : left;
+        width : 50%;
+    }
+}
